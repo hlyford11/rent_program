@@ -5,13 +5,30 @@ $( document ).ready(function() {
     thisMonth = $("#the-month").val();    
   });
 
-// send rent charges to roommates on the 23rd
+// send rent charges to roommates on the 23rd`
 
   // SHARED DATA  
   var accessToken = "qJ2V8CtJLu5UL4DbfbrFaWW4pFmgN9Pc";
   var audienceType = "private";
 
   var roomatesData = [
+    {
+      "name":"Brittany",  
+      "access_token": accessToken,
+      "phone":"4085960517",
+      "note":"Troll please pay your rent (and internet) amount of " + "$1054" + " for " + thisMonth + ". Did you know I used an API to do this? (smug emojji)",
+      "amount":0.01, // -1040.00,
+      "audience": audienceType
+    },
+    {
+      "name":"Brittany2",  
+      "access_token": accessToken,
+      "phone":"4085960517",
+      "note":"Troll please pay your rent (and internet) amount of " + "$1054" + " for " + thisMonth + ". Did you know I used an API to do this? (smug emojji)",
+      "amount":-0.01, // -1040.00,
+      "audience": audienceType
+    }
+    /*
     {
       "name":"Brittany",  
       "access_token": accessToken,
@@ -44,19 +61,21 @@ $( document ).ready(function() {
       "amount":-1199.00,
       "audience": audienceType
     }
+    */
   ]
 
   var workedForPerson = function(name) {
     console.log(name + " has been charged rent.")
   }
   var didNotWorkForPerson = function(name) {
-    console.log(name + " was not charged. Error occurred.")
+    var result = name + " was not charged. Error occurred.";
+    $('#results').append("<li>" + result + "</li>");
   }
 
   $('#rent-button').click(function(){    
     console.log(thisMonth);    
     // UNCOMMENT NEXT LINE ONLY WHEN READY TO CHARGE RENT
-    // chargeEveryone();   
+    chargeEveryone();   
   });
 
   var chargeEveryone = function() {
@@ -65,7 +84,7 @@ $( document ).ready(function() {
   for (i = 0; i < roomatesData.length; i++) {
     $.ajax({
       type: "POST",
-      url : 'https://api.venmo.com/v1/payments',
+      url : 'https://api.venmo.com/v1/payments 11111',
       dataType : "json",
       data: i,
       success : workedForPerson(roomatesData[i].name),

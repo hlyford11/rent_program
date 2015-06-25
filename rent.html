@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
- 
-    <title>Rent machine</title>
-
-    
+  <head> 
+    <title>Rent machine</title>  
+    <link rel="stylesheet" type="text/css" href="da_bootstrap/css/bootstrap.css">  
+    <link rel="stylesheet" type="text/css" href="style.css">  
   </head>
+
   <body class='test'>
+  	<div id="main-div">
+	  	<input placeholder="What month is it?" type="text" id="the-month">
+	  	<button class="btn btn-success" id="rent-button">Charge them rent!</button>
 
-  	<input type="text" id="the-month">
-  	<button id="rent-button">Charge them rent!</button>
-
+	  		<div id="results">
+	  			<ul>
+	  				
+	  			</ul>	
+	  		</div>	
+	  </div>	
   </body>
+
+  
   <script src="da_jquery.js"></script>
   <script src="rent.js"></script>
 </html>
