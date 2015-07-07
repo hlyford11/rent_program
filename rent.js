@@ -15,7 +15,7 @@ $( document ).ready(function() {
   var workedForPerson = function(data) {
     var resultWorked = name + " has been charged rent for " + thisMonth + ".";
     $('#results').append("<li class='list-group-item list-group-item-success'>" + resultWorked + "</li>");
-    alert(data);
+    console.log(data);
   }
   /*
   var didNotWorkForPerson = function(name) {
