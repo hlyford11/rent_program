@@ -11,12 +11,30 @@ var roommatesData = [
       audience: audienceType
     }
   },
-  {name: "Brittany2",
+  {name: "Chrysan",
     apiData: {      
       access_token: accessToken,    
-      phone:"4085960517",      
+      email:"chrysan.j.tung@gmail.com",
       note: "",
-      amount:-0.01, // -1040.00,
+      amount:0.01, // -1040.00,
+      audience: audienceType
+    }
+  },
+  {name: "Claire",
+    apiData: {      
+      access_token: accessToken,
+      phone:"8052799089",     
+      note: "",
+      amount:0.01, // -1040.00,      
+      audience: audienceType
+    }
+  },
+  {name: "Cody",
+    apiData: {      
+      access_token: accessToken,
+      phone:"9145060053",     
+      note: "",
+      amount:0.01, // -1040.00,      
       audience: audienceType
     }
   }

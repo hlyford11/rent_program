@@ -1,6 +1,21 @@
 #main-div {
-	margin: 20%
+	margin: 9% auto 0 auto;
+	width: 40%;
+	text-align: center;
+}
+#buttons {
+	padding-top: 5%;
+}
+#the-month {
+	margin-right: 3%;
+}
+#rent-button-submit {
+	margin-top: 3%;
 }
 #results {	
 	background-color: pink;
+}
+#prof-image {
+	border-radius: 50%;
+	margin-left: 4%;
 }
