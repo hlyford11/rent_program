@@ -1,4 +1,5 @@
-var accessToken = "qJ2V8CtJLu5UL4DbfbrFaWW4pFmgN9Pc";
+// ADD BACK ACCESS TOKEN WHEN READY 
+var accessToken = "XXXXXXX";
 var audienceType = "private";
 
 var roommatesData = [  
