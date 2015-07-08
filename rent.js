@@ -4,9 +4,17 @@ var thisMonth = "";
 
 $( document ).ready(function() {
   $("#rent-button-submit").hide();
+  $("#the-month").hide();
+  $("#rent-button-month").hide();
+  $('#cors-button').click(function() {
+    $("#the-month").show();
+    $("#rent-button-month").show();
+    $("#cors-button").removeClass("btn-danger").addClass("btn-success");
+  })
   $('#rent-button-month').click(function() {
     thisMonth = $("#the-month").val();  
     $("#rent-button-submit").show(300);
+    $('#cors-button').hide(300);
   });
   $('#rent-button-submit').click(function(){        
     // UNCOMMENT NEXT LINE ONLY WHEN READY TO CHARGE RENT
