@@ -38,6 +38,7 @@ var roommatesData = [
       audience: audienceType
     }
   }
+]
   */
 // this is test roommate data, it will send two requests - one paying $0.01 and one request $0.01 - to a very patient Brittany
 var roommatesData = [
@@ -59,3 +60,4 @@ var roommatesData = [
       audience: audienceType
     }
   }
+]

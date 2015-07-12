@@ -18,10 +18,10 @@ $( document ).ready(function() {
     });
 });
 
-  // this function will be called if the POST request is successful
+  // this function will be called if the POST request is successful and will add the charge information to the results div
   var workedForPerson = function(data) {
     var profPicUrl = data.data.payment["target"].user.profile_picture_url;
-    var resultWorked = data.data.payment["target"].user.first_name + " has been charged " + data.data.payment.amount + " rent for " + thisMonth + ".";
+    var resultWorked = data.data.payment["target"].user.first_name + " has been charged $" + data.data.payment.amount + " rent for " + thisMonth + ".";
     $('#results').append("<li class='list-group-item list-group-item-success'>" + resultWorked + "<img id='prof-image'  src='" + profPicUrl + "'>" + "</li>");
   }
   // this function will be called if the POST request is NOT successful
@@ -39,7 +39,8 @@ $( document ).ready(function() {
   // loops through each roommate and sends POST request to Venmo API, at the end it will return the balance of the charging user. For async reasons, returnBalance may actually complete first but that's OK.
   var chargeEveryone = function() {
     for (i = 0; i < roommatesData.length; i++) {
-      roommatesData[i].apiData.note = "Testing Venmo API to take rent (ignore this) " + thisMonth;
+      var rentAmount = Math.abs(roommatesData[i].apiData.amount);
+      roommatesData[i].apiData.note = "Please pay your rent plus Comcast total of $" + rentAmount + " for " + thisMonth;
     }
     for (i = 0; i < roommatesData.length; i++) {
       $.ajax({
